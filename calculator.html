@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Simple Calculator</h3>
+
+    <form action="">
+        <label for="value1">Value 1 : </label>
+        <input type="text" name="v1" id="value1"><br><br>
+        <label for="value2">Value 2 : </label>
+        <input type="text" name="v2" id="value2"><br><br>
+    </form>
+    <div>
+
+        <button onclick="add()">ADDITION</button>
+        <button onclick="sub()">SUBTRACT</button>
+        <button onclick="mul()">MULTIPLY</button>
+        <button onclick="div()">DIVISION</button><br><br>
+    </div>
+
+    <div id="result"></div>
+    <script>
+        function add() {
+            let val1 = parseInt(document.getElementById('value1').value);
+            let val2 = parseInt(document.getElementById('value2').value);
+            let res = val1 + val2;
+            document.getElementById('result').innerHTML = `Addition of ${val1} and ${val2} is ${res}`
+        }
+
+        function sub() {
+            let val1 = document.getElementById('value1').value;
+            let val2 = document.getElementById('value2').value;
+            let res = val1 - val2;
+            document.getElementById('result').innerHTML = `Subtraction of ${val1} and ${val2} is ${res}`
+        }
+
+        function mul() {
+            let val1 = document.getElementById('value1').value;
+            let val2 = document.getElementById('value2').value;
+            let res = val1 * val2;
+            document.getElementById('result').innerHTML = `Multiplication of ${val1} and ${val2} is ${res}`
+        }
+
+        function div() {
+            let val1 = document.getElementById('value1').value;
+            let val2 = document.getElementById('value2').value;
+            let res = val1 / val2;
+            document.getElementById('result').innerHTML = `Division of ${val1} and ${val2} is ${res}`
+        }
+    </script>
+</body>
+
+</html>
